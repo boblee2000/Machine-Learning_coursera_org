@@ -27,6 +27,15 @@ sigma = zeros(1, size(X, 2));
 %       
 
 
+a = [];
+for i = 1: size(X,2)
+    c = (X(:,i) - mean(X(:,i)))/std(X(:,i));
+    a = [a, c];
+    mu(:,i) = mean(X(:,i));
+    sigma(:,i) = std(X(:,i)); 
+    end
+X_norm = a;
+
 
 
 
