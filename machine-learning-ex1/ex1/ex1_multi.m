@@ -104,7 +104,7 @@ fprintf('\n');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-K = ([1650, 3] - mu)./sigma
+K = ([1650, 3] - mu)./sigma;
 price = theta'*[1; K']; 
 
 
@@ -150,7 +150,7 @@ fprintf('\n');
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-price = 0; % You should change this
+price = theta'*[1; 1650; 3]; % You should change this
 
 
 % ============================================================
