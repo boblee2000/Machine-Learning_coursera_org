@@ -19,7 +19,7 @@ grad = zeros(size(theta));
 
 a = y'*log(sigmoid(theta'*X'))';
 b = (1-y')*log(1 - sigmoid(theta'*X'))';
-tmp = theta 
+tmp = theta; 
 tmp(1:1,:) = [0];
 J = ((-1)/m)*(a+b) + (lambda*(tmp'*tmp))/(2*m);
 
