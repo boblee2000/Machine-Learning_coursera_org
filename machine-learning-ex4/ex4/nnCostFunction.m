@@ -106,7 +106,12 @@ for i = 1:m
 end
 
 Theta1_grad = Theta1_grad/m;
+Theta1(:,1:1) = 0;
+Theta1_grad = Theta1_grad + (Theta1*lambda)/m;
+
 Theta2_grad = Theta2_grad/m;
+Theta2(:,1:1) = 0;
+Theta2_grad = Theta2_grad + (Theta2*lambda)/m;
 
 %e/m
 Theta1(:,1) = [];
