@@ -20,6 +20,22 @@ idx = zeros(size(X,1), 1);
 %
 % Note: You can use a for-loop over the examples to compute this.
 %
+id = 0;
+value1 = 999999;
+row = size(X, 1);
+for i = 1:row
+	for k = 1:K
+		value = norm(X(i,1:end) - centroids(k, 1:end));
+		if value < value1
+			value1 = value;
+			id = k;
+		end
+	end
+	value1 = 999999;
+	idx(i,1) = id;
+end
+
+
 
 
 
